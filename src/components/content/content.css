@@ -1,0 +1,29 @@
+.listPagination {
+    display: flex;
+    list-style: none;
+}
+
+.listPagination li {
+    padding: 5px;
+    background-color: aqua;
+    border: black;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.paginationActive {
+    padding: 5px;
+    background-color: rgb(238, 60, 60) !important;
+    border: black;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.hoverLink {
+    cursor: pointer;
+    color: blue;
+}
+
+#productForm {
+    padding: 20px;
+}
