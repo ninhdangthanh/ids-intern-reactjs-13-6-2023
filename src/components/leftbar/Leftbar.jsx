@@ -5,8 +5,8 @@ import { useLocation } from "react-router-dom";
 export default function Leftbar(props) {
     const location = useLocation();
     
-    useEffect(() => {
-    })
+    // useEffect(() => {
+    // })
     
 
     return (

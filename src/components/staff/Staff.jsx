@@ -57,9 +57,9 @@ export default function Staff() {
     const isLoading = useSelector(isLoadingSelector)
 
 
-    useEffect(() => {
-        // console.log("staff", staff);
-    }, [staffs])
+    // useEffect(() => {
+    //     // console.log("staff", staff);
+    // }, [staffs])
     
     const handlePage = (pageNumber) => {
         console.log("pageNumber", pageNumber);

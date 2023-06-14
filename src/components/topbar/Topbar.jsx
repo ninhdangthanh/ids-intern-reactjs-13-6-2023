@@ -22,9 +22,9 @@ export default function Topbar() {
         }
     }, [searchQuery]);
 
-    useEffect(() => {
-        dispatch(setIsLoading())
-    }, [inputValue])
+    // useEffect(() => {
+    //     dispatch(setIsLoading())
+    // }, [inputValue])
 
     useEffect(() => {
         dispatch(removeIsLoading())

@@ -46,9 +46,13 @@ const orderSlice = createSlice({
   initialState: { isLoading: false, totalPage: 1, orders: [] },
   reducers: {},
   extraReducers: {
+    [fetchOrders.pending]: (state, action) => {
+      state.isLoading = true;
+    },
     [fetchOrders.fulfilled]: (state, action) => {
       state.orders = action.payload;
       state.totalPage = Math.ceil(state.orders.length / 10);
+      state.isLoading = false;
     },
     [deleteOrder.fulfilled]: (state, action) => {
       state.orders = state.orders.filter((order) => {

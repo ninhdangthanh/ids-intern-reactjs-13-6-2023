@@ -42,14 +42,18 @@ export const editStaff = createAsyncThunk(
 
 const staffSlice = createSlice({
   name: "staff",
-  initialState: { status: "pending", totalPage: 1, staff: [] },
+  initialState: { isLoading: false, totalPage: 1, staff: [] },
   reducers: {
     getAllStaff: (state, action) => {},
   },
   extraReducers: {
+    [fetchStaffs.pending]: (state, action) => {
+      state.isLoading = true;
+    },
     [fetchStaffs.fulfilled]: (state, action) => {
       state.staff = action.payload;
       state.totalPage = Math.ceil(state.staff.length / 10);
+      state.isLoading = false;
     },
     [deleteStaff.fulfilled]: (state, action) => {
       state.staff = state.staff.filter((staff) => {

@@ -55,9 +55,13 @@ const productSlice = createSlice({
     },
   },
   extraReducers: {
+    [fetchProducts.pending]: (state, action) => {
+      state.isLoading = true;
+    },
     [fetchProducts.fulfilled]: (state, action) => {
       state.products = action.payload;
       state.totalPage = Math.ceil(state.products.length / 10);
+      state.isLoading = false;
     },
     [deleteProduct.fulfilled]: (state, action) => {
       state.products = state.products.filter((product) => {

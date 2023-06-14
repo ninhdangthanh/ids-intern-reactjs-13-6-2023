@@ -57,10 +57,10 @@ export default function Staff() {
     const isLoading = useSelector(isLoadingSelector)
 
 
-    useEffect(() => {
-        // console.log("staff", staff);
+    // useEffect(() => {
+    //     // console.log("staff", staff);
 
-    }, [])
+    // }, [])
 
     const formatDate = (timestamp) => {
         const date = new Date(timestamp * 1000); // Multiply by 1000 to convert seconds to milliseconds
